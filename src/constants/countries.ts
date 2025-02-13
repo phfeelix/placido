@@ -15,7 +15,23 @@ export type Card = {
 };
 
 const countries: Country[] = [
-  { name: 'Brasil', code: "BR", cards: [{ title: 'PIX, PIX Direct', description: 'O método de pagamento instantâneo ligado a mais de 700 instituições financeiras, criado e suportado pelo Banco Central do Brasil. PIX Direct oferece transações em tempo real, permitindo acesso imediato aos fundos para depósitos e retiradas.', icon: FaPix}, { title: 'PicPay', description: 'Uma aplicação de carteira digital para enviar e receber dinheiro, pagar contas e armazenar cartões de fidelidade.', icon: SiPicpay}]},
+  { name: 'Brasil', code: "BR", cards: [
+    { 
+      title: 'PIX, PIX Direct', 
+      description: 'O método de pagamento instantâneo ligado a mais de 700 instituições financeiras, criado e suportado pelo Banco Central do Brasil. PIX Direct oferece transações em tempo real, permitindo acesso imediato aos fundos para depósitos e retiradas.', 
+      icon: FaPix
+    }, 
+    { 
+      title: 'PicPay', 
+      description: 'Uma aplicação de carteira digital para enviar e receber dinheiro, pagar contas e armazenar cartões de fidelidade.', 
+      icon: SiPicpay
+    },
+    { 
+      title: 'PicPay', 
+      description: 'Uma aplicação de carteira digital para enviar e receber dinheiro, pagar contas e armazenar cartões de fidelidade.', 
+      icon: SiPicpay
+    }
+  ]},
   { name: 'Mexico', code: 'MX', cards: [] },
   { name: 'Argentina', code: 'AR', cards: [] },
   { name: 'Chile', code: 'CL', cards: [] },

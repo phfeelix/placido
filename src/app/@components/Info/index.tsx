@@ -10,14 +10,14 @@ const Info = () => {
   return (
     <div className='w-full rounded-xl bg-neutral-100 p-8 md:p-16 mt-20 shadow-sm'>
       <Container className="flex flex-col gap-8 md:gap-16">
-        <div className='flex flex-col md:flex-row items-center justify-between gap-8'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8'>
           <div className="w-full md:w-[450px]">
-            <Title className="text-3xl md:text-4xl font-bold text-left">
+            <Title className="text-2xl md:text-4xl font-bold text-center md:text-left">
               Escalabilidade para facilitar seu crescimento<span className="text-primary-500">.</span>
             </Title>
           </div>
           <div className="w-full md:w-1/3">
-            <Text className="text-base text-gray-600">
+            <Text className="text-base text-gray-600 text-center md:text-left">
               Crie um sistema financeiro eficiente para seu negócio e tenha controle completo do fluxo de caixa.
             </Text>
           </div>

@@ -9,7 +9,7 @@ import AnimateOnScroll from "@/components/features/AnimateOnScroll";
 export default function Home() {
   return (
     <>
-      <AnimateOnScroll>
+      <AnimateOnScroll delay={0.1}>
         <Hero />
       </AnimateOnScroll>
 

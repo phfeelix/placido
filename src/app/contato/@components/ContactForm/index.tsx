@@ -29,7 +29,6 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-6 w-full'>
       <div className='flex flex-col gap-4'>
-        {/* Nome */}
         <div className='flex flex-col gap-2'>
           <Label className='text-base font-semibold'>Nome</Label>
           <Input
@@ -41,7 +40,6 @@ const ContactForm = () => {
           )}
         </div>
 
-        {/* Telefone */}
         <div className='flex flex-col gap-2'>
           <Label className='text-base font-semibold'>Telefone</Label>
           <Input
@@ -53,7 +51,6 @@ const ContactForm = () => {
           )}
         </div>
 
-        {/* E-mail */}
         <div className='flex flex-col gap-2'>
           <Label className='text-base font-semibold'>E-mail</Label>
           <Input
@@ -71,7 +68,6 @@ const ContactForm = () => {
           )}
         </div>
 
-        {/* Empresa */}
         <div className='flex flex-col gap-2'>
           <Label className='text-base font-semibold'>Website ou nome da empresa</Label>
           <Input
@@ -83,7 +79,6 @@ const ContactForm = () => {
           )}
         </div>
 
-        {/* Descrição */}
         <div className='flex flex-col gap-2'>
           <Label className='text-base font-semibold'>Descrição</Label>
           <Textarea
@@ -96,7 +91,6 @@ const ContactForm = () => {
         </div>
       </div>
 
-      {/* Botão de Envio */}
       <div className='w-full'>
         <Button
           type='submit'

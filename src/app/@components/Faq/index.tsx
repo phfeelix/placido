@@ -1,5 +1,6 @@
 'use client'
 
+import Container from '@/components/features/Container'
 import { questions } from '@/constants/countries'
 import React, { useState } from 'react'
 
@@ -7,31 +8,33 @@ const Faq = () => {
   const [opened, setOpened] = useState<number | undefined>()
 
   return (
-    <div className="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 mx-auto mt-14">
-      <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
-          Suas perguntas, respondidas
-        </h2>
-        <p className="mt-1 text-gray-600 dark:text-neutral-400">
-          Respostas às perguntas mais frequentes.
-        </p>
-      </div>
+    <Container id='faq'>
+      <div className="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 mx-auto mt-14">
+        <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
+            Suas perguntas, respondidas
+          </h2>
+          <p className="mt-1 text-gray-600 dark:text-neutral-400">
+            Respostas às perguntas mais frequentes.
+          </p>
+        </div>
 
-      <div className="max-w-2xl mx-auto space-y-4">
-        {questions.map((question, index) => {
-          const isOpen = opened === index
+        <div className="max-w-2xl mx-auto space-y-4">
+          {questions.map((question, index) => {
+            const isOpen = opened === index
 
-          return (
-            <FaqItem
-              key={index}
-              question={question}
-              isOpen={isOpen}
-              onClick={() => setOpened(isOpen ? undefined : index)}
-            />
-          )
-        })}
+            return (
+              <FaqItem
+                key={index}
+                question={question}
+                isOpen={isOpen}
+                onClick={() => setOpened(isOpen ? undefined : index)}
+              />
+            )
+          })}
+        </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

@@ -8,24 +8,24 @@ import { Button } from '@/components/ui/button'
 
 const Features = () => {
   return (
-    <Container>
+    <Container id='sobrenos'>
       <div className='flex flex-col gap-10 mt-20'>
         <div className='flex flex-col items-center justify-center'>
           <Text className="text-primary-500">Porque nós?</Text>
-          <Title className="text-2xl font-bold md:text-4xl md:leading-tight">Por que escolher o Meio de Pagamento</Title>
+          <Title className="text-2xl font-bold md:text-4xl md:leading-tight text-center">Por que escolher o Meio de Pagamento</Title>
         </div>
         <div className='flex flex-col gap-5'>
           <div className='w-full flex flex-col md:flex-row gap-5'>
             <Card className='flex-1'>
-              <div className='flex flex-col justify-between gap-5'>
-                <Title className='text-2xl md:text-6xl text-primary-500'>3K+</Title>
-                <Title className='text-lg'>Empresas que já estão em operação</Title>
+              <div className='flex flex-col items-center md:items-start gap-2 md:gap-5'>
+                <Title className='text-4xl md:text-6xl text-primary-500 font-bold'>3K+</Title>
+                <Title className='text-xl md:text-2xl font-semibold text-center'>Empresas que já estão em operação</Title>
               </div>
             </Card>
-            <Card className='flex-1 '>
-              <div className='flex flex-col justify-between gap-5'>
-                <Title className='text-2xl md:text-6xl text-primary-500'>99.9%</Title>
-                <Title className='text-lg'>Taxa de sucesso nas transações</Title>
+            <Card className='flex-1'>
+              <div className='flex flex-col items-center md:items-start gap-2 md:gap-5'>
+                <Title className='text-4xl md:text-6xl text-primary-500 font-bold'>99.9%</Title>
+                <Title className='text-xl md:text-2xl font-semibold text-center'>Taxa de sucesso nas transações</Title>
               </div>
             </Card>
           </div>
@@ -69,6 +69,6 @@ export default Features
 
 const Card = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   return (
-    <div className={`flex flex-col md:flex-row items-center justify-between p-4 md:p-8 bg-white rounded-lg shadow-sm border border-gray-100 ${className && className}`}>{children}</div>
+    <div className={`flex flex-col md:flex-row items-center justify-between p-6 md:p-8 bg-white rounded-lg shadow-sm border border-gray-100 ${className && className}`}>{children}</div>
   )
 }

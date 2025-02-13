@@ -11,9 +11,9 @@ const ExperimentCard = () => {
   const router = useRouter()
 
   return (
-    <Container className='md:py-16 md:px-16 rounded-3xl bg-primary-500 mt-20'>
+    <Container className='py-8 px-4 md:py-16 md:px-16 md:rounded-3xl bg-primary-500 mt-20'>
       <div className='flex flex-col md:flex-row justify-between items-center gap-8'>
-        <div className='flex-1 flex flex-col gap-2 items-start justify-center'>
+        <div className='flex-1 flex flex-col gap-2 items-center md:items-start justify-center text-center md:text-start'>
           <Text className='text-primary-700 text-sm font-semibold uppercase tracking-widest'>
             Experimente agora
           </Text>
@@ -28,7 +28,7 @@ const ExperimentCard = () => {
         <div className='flex-1 flex items-center justify-center md:justify-end'>
           <Button
             variant={'secondary'}
-            className='w-full md:w-auto px-8 py-4 text-lg font-semibold'
+            className='w-full md:w-auto px-4 md:px-8 py-4 text-base md:text-lg font-semibold'
             onClick={() => router.push("contato")}
           >
             Experimente agora!

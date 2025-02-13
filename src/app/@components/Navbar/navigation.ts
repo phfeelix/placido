@@ -8,19 +8,15 @@ export interface ILink {
 export const dashboardNavbarNavigation: ILink[] = [
   {
     label: "Sobre nós",
-    href: "/",
+    href: "#sobrenos",
   },
   {
     label: "Métodos",
-    href: "/clientes",
+    href: "#metodo",
   },
   {
     label: "Contatos",
-    href: "/reviews",
-  },
-  {
-    label: "Documentação API",
-    href: "/documentation",
+    href: "/contato",
   },
   {
     label: "Começar",
