@@ -1,11 +1,16 @@
+'use client'
+
 import heroImage from '@/assets/Payment Information-pana.svg'
 import AnimateOnScroll from '@/components/features/AnimateOnScroll'
 import Container from '@/components/features/Container'
 import Title from '@/components/shared/Title'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+  const router = useRouter()
+
   return (
     <Container className='py-16'>
       <div className="w-full min-h-[calc(100vh-248px)] flex flex-col mt-7">
@@ -28,6 +33,7 @@ const Hero = () => {
                   variant={'default'}
                   size={'xl'}
                   className='w-[200px] rounded-full hover:bg-primary-700 transition-colors'
+                  onClick={() => router.push('/contato')}
                 >
                   Começar agora!
                 </Button>

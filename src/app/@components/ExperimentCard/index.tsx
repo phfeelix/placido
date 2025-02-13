@@ -29,7 +29,7 @@ const ExperimentCard = () => {
           <Button
             variant={'secondary'}
             className='w-full md:w-auto px-8 py-4 text-lg font-semibold'
-            onClick={() => router.push("contatos")}
+            onClick={() => router.push("contato")}
           >
             Experimente agora!
           </Button>
