@@ -1,50 +1,47 @@
 'use client'
 
-import { useState } from 'react'
 import Container from '@/components/features/Container'
 import Brand from '@/components/shared/Brand'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
-import Link from 'next/link'
-import { dashboardNavbarNavigation, ILink } from './navigation'
 import { Menu, X } from 'lucide-react'
-import AnimateOnScroll from '@/components/features/AnimateOnScroll'
+import Link from 'next/link'
+import { useState } from 'react'
+import { dashboardNavbarNavigation, ILink } from './navigation'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <AnimateOnScroll>
-      <Container className="bg-white py-4">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center w-[250px] md:w-[350px]">
-            <Brand />
-          </div>
+    <Container className="bg-white py-4">
+      <div className="flex justify-between items-center">
+        <Link className="flex items-center w-[250px] md:w-[350px]" href='/'>
+          <Brand />
+        </Link>
 
-          <div className='flex items-center justify-center'>
-            <button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-200 transition"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-
-          <nav
-            className={cn(
-              'flex-col md:flex-row md:flex items-center gap-4',
-              menuOpen ? 'flex absolute top-16 left-0 w-full bg-white shadow-lg p-4' : 'hidden md:flex'
-            )}
+        <div className='flex items-center justify-center'>
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-gray-200 transition"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            <ul className="flex flex-col md:flex-row items-center gap-4">
-              {dashboardNavbarNavigation.map((item) => (
-                <NavigationItem key={item.href} item={item} />
-              ))}
-            </ul>
-          </nav>
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      </Container>
-    </AnimateOnScroll>
+
+        <nav
+          className={cn(
+            'flex-col md:flex-row md:flex items-center gap-4',
+            menuOpen ? 'flex absolute top-16 left-0 w-full bg-white shadow-lg p-4' : 'hidden md:flex'
+          )}
+        >
+          <ul className="flex flex-col md:flex-row items-center gap-4">
+            {dashboardNavbarNavigation.map((item) => (
+              <NavigationItem key={item.href} item={item} />
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </Container>
   )
 }
 
