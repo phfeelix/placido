@@ -11,7 +11,7 @@ const Features = () => {
     <Container id='sobrenos'>
       <div className='flex flex-col gap-10 mt-20'>
         <div className='flex flex-col items-center justify-center'>
-          <Text className="text-primary-500">Porque nós?</Text>
+          <Text className="text-primary-500">Por que nós?</Text>
           <Title className="text-2xl font-bold md:text-4xl md:leading-tight text-center">Por que escolher o Meio de Pagamento</Title>
         </div>
         <div className='flex flex-col gap-5'>
